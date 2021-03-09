@@ -1,6 +1,7 @@
 {
   "name": "tic-tac-toe-widget",
-  "version": "0.1.4",
+  "version": "0.1.5",
+  "description": "React based tic-tac-toe widget",
   "main": "dist/App.js",
   "private": false,
   "babel": {

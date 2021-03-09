@@ -7,8 +7,8 @@ import BoardManager from './board/boardManager.js';
 
 const App = () => {
 
-  let storeBoardData = JSON.parse(localStorage.getItem('boardData')) || null ;
-  let storeNextPlayer = localStorage.getItem('nextMove') || 'X';
+  let storeBoardData = JSON.parse(sessionStorage.getItem('boardData')) || null ;
+  let storeNextPlayer = sessionStorage.getItem('nextMove') || 'X';
 
   return (
       <BoardManager storeBoardData={storeBoardData} storeNextPlayer={storeNextPlayer} />

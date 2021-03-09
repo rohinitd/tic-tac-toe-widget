@@ -131,8 +131,8 @@ const BoardManager = ({storeBoardData, storeNextPlayer}) => {
 
     setBoardState(_boardStateCopy);
     setBoardData(_boardCopy);
-    localStorage.setItem('nextMove', nextMove === 'X' ? 'O' : 'X');
-    localStorage.setItem('boardData', JSON.stringify(_boardCopy));
+    sessionStorage.setItem('nextMove', nextMove === 'X' ? 'O' : 'X');
+    sessionStorage.setItem('boardData', JSON.stringify(_boardCopy));
   };
 
   /*
@@ -153,8 +153,8 @@ const BoardManager = ({storeBoardData, storeNextPlayer}) => {
     setWon('');
     setNextMove('X');
     setTie(false);
-    localStorage.setItem('nextMove', 'X');
-    localStorage.setItem('boardData', JSON.stringify(data));
+    sessionStorage.setItem('nextMove', 'X');
+    sessionStorage.setItem('boardData', JSON.stringify(data));
   };
 
   return (
