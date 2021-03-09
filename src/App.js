@@ -166,6 +166,7 @@ const App = ({storeBoardData, storeNextPlayer}) => {
         <div className="div1">
           <Init boardSize={size} setSize={setSize} />
           {<button onClick={handleReset}>Reset Game</button>}
+          {won === '' && !tie && <h4> {nextMove} is the next player </h4>}
         </div>
         <div className="div2" >
           {boardData && boardData.length === size &&
