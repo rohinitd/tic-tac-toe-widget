@@ -1,6 +1,6 @@
 {
   "name": "tic-tac-toe-widget",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/App.js",
   "private": false,
   "babel": {
