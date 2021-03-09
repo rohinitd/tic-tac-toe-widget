@@ -1,7 +1,8 @@
 {
-  "name": "tic-tac-toe",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tic-tac-toe-widget",
+  "version": "0.1.2",
+  "main": "dist/App.js",
+  "private": false,
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -16,16 +17,19 @@
     "react-select": "^4.2.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "8.1.0",
-    "html-webpack-plugin": "^5.2.0",
+    "html-webpack-plugin": "^5.3.0",
     "webpack": "4.44.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "3.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel ./src -d dist --copy-files"
   },
   "browserslist": {
     "production": [
