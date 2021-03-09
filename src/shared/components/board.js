@@ -21,7 +21,7 @@ const Row = ({boardSize, rowData, rowId, handleGridClick}) => {
 const Board = ({boardSize, boardData, handleGridClick}) => {
 
   return (
-      <div style={{padding: '30px'}}>
+      <div className="paddingCls">
         {
           (function(){
             let rows = [];

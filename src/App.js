@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import Init from './board/init.js';
 import Board from './shared/components/board.js';
 import {initBoardState} from './board/util.js';
@@ -161,12 +162,18 @@ const App = ({storeBoardData, storeNextPlayer}) => {
       <h1>
         Tic Tac Toe
       </h1>
-      <Init boardSize={size} setSize={setSize} />
-      {<button style={{marginLeft: '30px'}} onClick={handleReset}>Reset Game</button>}
-      {boardData && boardData.length === size &&
-        <Board boardSize={size} boardData={boardData} handleGridClick={handleGridClick} />}
-      {won !== '' && <h4> {won} player won the game </h4>}
-      {tie && <h4> Game tie </h4>}
+      <div className="main-div" >
+        <div className="div1">
+          <Init boardSize={size} setSize={setSize} />
+          {<button onClick={handleReset}>Reset Game</button>}
+        </div>
+        <div className="div2" >
+          {boardData && boardData.length === size &&
+            <Board boardSize={size} boardData={boardData} handleGridClick={handleGridClick} />}
+          {won !== '' && <h4 className="paddingCls"> {won} player won the game </h4>}
+          {tie && <h4 className="paddingCls"> Game tie </h4>}
+        </div>
+      </div>
     </div>
   );
 };
